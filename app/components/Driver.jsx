@@ -18,15 +18,15 @@ class Driver extends Component {
                 <div>
                     <Grid>
                         <Row className="show-grid-title">
-                            <Col sm={6} xs={6} md={4}>Piloto</Col>
-                            <Col sm={6} xs={6} md={4}>Nacionalidad</Col>
-                            <Col sm={6} xs={6} md={4}>Nacimiento</Col>
+                            <Col sm={4} xs={6} md={4}>Piloto</Col>
+                            <Col sm={4} xs={6} md={4}>Nacionalidad</Col>
+                            <Col sm={4} xs={6} md={4}>Nacimiento</Col>
                         </Row>
                         {this.props.Drivers.map((item, i) => {
                             return <Row key={i} className="show-grid">
-                                <Col sm={6} xs={6} md={4}>{item.givenName} {item.familyName}</Col>
-                                <Col sm={6} xs={6} md={4}>{item.nationality}</Col>
-                                <Col sm={6} xs={6} md={4}>{item.dateOfBirth}</Col>
+                                <Col sm={4} xs={6} md={4}>{item.givenName} {item.familyName}</Col>
+                                <Col sm={4} xs={6} md={4}>{item.nationality}</Col>
+                                <Col sm={4} xs={6} md={4}>{item.dateOfBirth}</Col>
                             </Row>
                         })}
                     </Grid>

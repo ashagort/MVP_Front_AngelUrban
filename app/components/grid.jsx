@@ -22,17 +22,17 @@ class ShowGrid extends Component {
             return (
                     <Grid>
                         <Row className="show-grid-title">
-                            <Col sm={6} xs={6} md={3}>Premio</Col>
-                            <Col sm={6} xs={6} md={3}>Round de Carrera</Col>
-                            <Col sm={6} xs={6} md={3}>Fecha de la carrera</Col>
-                            <Col sm={6} xs={6} md={3}>Circuito</Col>
+                            <Col sm={3} xs={6} md={3}>Premio</Col>
+                            <Col sm={3} xs={6} md={3}>Round de Carrera</Col>
+                            <Col sm={3} xs={6} md={3}>Fecha de la carrera</Col>
+                            <Col sm={3} xs={6} md={3}>Circuito</Col>
                         </Row>
                         {this.props.Races.map((item, i) => {
                             return <Row key={i} className="show-grid">
-                                <Col sm={6} xs={6} md={3}>{item.raceName}</Col>
-                                <Col sm={6} xs={6} md={3}>{item.date}</Col>
-                                <Col sm={6} xs={6} md={3}>{item.Circuit.circuitName}</Col>
-                                <Col sm={6} xs={6} md={3}><Button value={item.round} onClick={this.selecRow}>Select</Button></Col>
+                                <Col sm={3} xs={6} md={3}>{item.raceName}</Col>
+                                <Col sm={3} xs={6} md={3}>{item.date}</Col>
+                                <Col sm={3} xs={6} md={3}>{item.Circuit.circuitName}</Col>
+                                <Col sm={3} xs={6} md={3}><Button value={item.round} onClick={this.selecRow}>Select</Button></Col>
                             </Row>
                         })}
                     </Grid>
