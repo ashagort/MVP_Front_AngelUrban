@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {Grid, Col, Row} from 'react-bootstrap';
 import AddDriver from './addDriver';
 
+require('./driver.less');
+
 class Driver extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ class Driver extends Component {
     render() {
         if (this.props.Drivers.length > 0) {
             return (
-                <div>
+                <div className="DriverGrid">
                     <Grid>
                         <Row className="show-grid-title">
                             <Col sm={4} xs={6} md={4}>Piloto</Col>
@@ -39,7 +41,6 @@ class Driver extends Component {
 }
 
 const mapStateToProps = (state) => {
-    //console.('Driver Grid: ',state);
     return {
         Drivers: state.DriverItems.items
     }

@@ -23,16 +23,16 @@ class ShowGrid extends Component {
                     <Grid>
                         <Row className="show-grid-title">
                             <Col sm={3} xs={6} md={3}>Premio</Col>
-                            <Col sm={3} xs={6} md={3}>Round de Carrera</Col>
-                            <Col sm={3} xs={6} md={3}>Fecha de la carrera</Col>
+                            <Col sm={3} xs={6} md={3}>Fecha de Carrera</Col>
                             <Col sm={3} xs={6} md={3}>Circuito</Col>
+                            <Col sm={3} xs={6} md={3}></Col>
                         </Row>
                         {this.props.Races.map((item, i) => {
                             return <Row key={i} className="show-grid">
                                 <Col sm={3} xs={6} md={3}>{item.raceName}</Col>
                                 <Col sm={3} xs={6} md={3}>{item.date}</Col>
                                 <Col sm={3} xs={6} md={3}>{item.Circuit.circuitName}</Col>
-                                <Col sm={3} xs={6} md={3}><Button value={item.round} onClick={this.selecRow}>Select</Button></Col>
+                                <Col sm={3} xs={6} md={3}><Button className="button-race" value={item.round} onClick={this.selecRow}>Select</Button></Col>
                             </Row>
                         })}
                     </Grid>
@@ -43,7 +43,6 @@ class ShowGrid extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         Races: state.SeasonItems.items,
         Season: state.SeasonItems.season
